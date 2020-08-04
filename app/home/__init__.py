@@ -3,4 +3,5 @@ from flask import Blueprint
 
 home = Blueprint('home', __name__)
 
-from . import views
+from app.home.views import index
+from app.home.views import user

@@ -2,11 +2,6 @@ from app.home import home
 from flask import render_template, redirect, url_for
 
 
-@home.route('/')
-def index():
-    return render_template('home/index.html')
-
-
 @home.route('/login')
 def login():
     return render_template('home/user/login.html')

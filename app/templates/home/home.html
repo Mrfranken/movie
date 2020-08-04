@@ -11,6 +11,9 @@
         <link rel="stylesheet" href="{{ url_for('static',filename='base/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ url_for('static',filename='base/css/bootstrap-movie.css') }}">
         <link rel="stylesheet" href="{{ url_for('static',filename='base/css/animate.css') }}">
+        {% block head_script %}
+        {% endblock %}
+
         <style>
             .navbar-brand > img {
                 display: inline;
@@ -48,14 +51,14 @@
                     <div class="form-group input-group">
                         <input type="text" class="form-control" placeholder="请输入电影名！">
                         <span class="input-group-btn">
-                                    <a class="btn btn-default" href="search.html"><span
-                                            class="glyphicon glyphicon-search"></span>&nbsp;搜索</a>
-                                </span>
+                            <a class="btn btn-default" href="{{ url_for('home.search') }}">
+                                <span class="glyphicon glyphicon-search"></span>&nbsp;搜索</a>
+                        </span>
                     </div>
                 </form>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="curlink" href="index.html"><span class="glyphicon glyphicon-film"></span>&nbsp;电影</a>
+                        <a class="curlink" href="{{ url_for('home.index') }}"><span class="glyphicon glyphicon-film"></span>&nbsp;电影</a>
                     </li>
                     <li>
                         <a class="curlink" href="{{ url_for('home.login') }}"><span
@@ -81,7 +84,7 @@
     <!--导航-->
 
     <!--内容-->
-    <div class="container" style="margin-top:76px">
+    <div class="container" style="margin-top:16px">
         {% block content %}
         {% endblock %}
     </div>

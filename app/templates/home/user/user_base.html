@@ -35,7 +35,8 @@
         for (i = 0; i < elems.length; i++) {
             elem = elems[i]
             if (elem.getAttribute('href') == location.pathname) {
-                elem.setAttribute('class', 'list-group-item active')
+                // elem.setAttribute('class', 'list-group-item active')
+                elem.addClass('active')
             }
 
         }

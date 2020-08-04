@@ -29,5 +29,9 @@
     拆分 user.html change_password.html comments.html loginlog.html moviecol.html，将共同的部分拆分到user_base.html，
     并在 user_base.html 中添加 js 代码（根据url去添加active属性）
     ```
+  
+#### 08.04
+- 搜索页面搭建
+
 
  
