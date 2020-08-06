@@ -1,4 +1,8 @@
 from flask import Flask
+from flask_login import LoginManager
+
+login_manager = LoginManager()
+
 from .home import home
 from .admin import admin
 from .models import db
@@ -21,8 +25,8 @@ def create_app():
     app.register_blueprint(home)
     app.register_blueprint(admin, url_prefix='/admin')
 
-    # login_manager.init_app(app)
-    # login_manager.login_view = 'web.login'
+    login_manager.init_app(app)
+    login_manager.login_view = 'admin.login'
 
     # admin.init_app(app)
 

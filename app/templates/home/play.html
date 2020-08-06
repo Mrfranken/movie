@@ -1,15 +1,21 @@
 {% extends 'home/home.html' %}
 {% block head_script %}
 {{ super() }}
-    <!--播放页面-->
-    <link rel="stylesheet" type="text/css" href="../static/jwplayer/skins/stormtrooper.css">
-    <script type="text/javascript" src="../static/ueditor/ueditor.config.js"></script>
-    <script type="text/javascript" src="../static/ueditor/ueditor.all.js"></script>
-    <script type="text/javascript" src="../static/ueditor/lang/zh-cn/zh-cn.js"></script>
-    <script>
-        SyntaxHighlighter.all();
-    </script>
-    <!--播放页面-->
+<!--播放页面-->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='jwplayer/skins/stormtrooper.css')}}">
+<script type="text/javascript" src="{{ url_for('static', filename='ueditor/ueditor.config.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='ueditor/ueditor.all.js')}}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='ueditor/lang/zh-cn/zh-cn.js')}}"></script>
+<script>
+    SyntaxHighlighter.all();
+</script>
+<style>
+    .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+        padding-right: 3px;
+        padding-left: 3px;
+    }
+</style>
+<!--播放页面-->
 {% endblock %}
 
 {% block content %}
@@ -85,7 +91,7 @@
                             <span class="glyphicon glyphicon-picture"></span>&nbsp;影片介绍
                         </td>
                         <td>
-                        该片主要讲述了人类为了抵抗怪兽的进攻，研制出了高大的机器战士与来犯怪兽进行对抗的故事。
+                            该片主要讲述了人类为了抵抗怪兽的进攻，研制出了高大的机器战士与来犯怪兽进行对抗的故事。
                         </td>
                     </tr>
                 </table>
@@ -124,7 +130,8 @@
                     <li class="item cl">
                         <a href="user.html">
                             <i class="avatar size-L radius">
-                                <img alt="50x50" src="holder.js/50x50" class="img-circle" style="border:1px solid #abcdef;">
+                                <img alt="50x50" src="holder.js/50x50" class="img-circle"
+                                     style="border:1px solid #abcdef;">
                             </i>
                         </a>
                         <div class="comment-main">
@@ -132,7 +139,9 @@
                                 <div class="comment-meta">
                                     <a class="comment-author" href="user.html">xiaoli</a>
                                     评论于
-                                    <time title="2016-12-07 09:12:51" datetime="2016-12-07 09:12:51">2017-03-01 09:12:51</time>
+                                    <time title="2016-12-07 09:12:51" datetime="2016-12-07 09:12:51">2017-03-01
+                                        09:12:51
+                                    </time>
                                 </div>
                             </header>
                             <div class="comment-body">
@@ -143,7 +152,8 @@
                     <li class="item cl">
                         <a href="user.html">
                             <i class="avatar size-L radius">
-                                <img alt="50x50" src="holder.js/50x50" class="img-circle" style="border:1px solid #abcdef;">
+                                <img alt="50x50" src="holder.js/50x50" class="img-circle"
+                                     style="border:1px solid #abcdef;">
                             </i>
                         </a>
                         <div class="comment-main">
@@ -151,7 +161,9 @@
                                 <div class="comment-meta">
                                     <a class="comment-author" href="user.html">xiaoli</a>
                                     评论于
-                                    <time title="2016-12-07 09:12:51" datetime="2016-12-07 09:12:51">2017-03-01 09:12:51</time>
+                                    <time title="2016-12-07 09:12:51" datetime="2016-12-07 09:12:51">2017-03-01
+                                        09:12:51
+                                    </time>
                                 </div>
                             </header>
                             <div class="comment-body">
@@ -162,7 +174,8 @@
                     <li class="item cl">
                         <a href="user.html">
                             <i class="avatar size-L radius">
-                                <img alt="50x50" src="holder.js/50x50" class="img-circle" style="border:1px solid #abcdef;">
+                                <img alt="50x50" src="holder.js/50x50" class="img-circle"
+                                     style="border:1px solid #abcdef;">
                             </i>
                         </a>
                         <div class="comment-main">
@@ -170,7 +183,9 @@
                                 <div class="comment-meta">
                                     <a class="comment-author" href="user.html">xiaoli</a>
                                     评论于
-                                    <time title="2016-12-07 09:12:51" datetime="2016-12-07 09:12:51">2017-03-01 09:12:51</time>
+                                    <time title="2016-12-07 09:12:51" datetime="2016-12-07 09:12:51">2017-03-01
+                                        09:12:51
+                                    </time>
                                 </div>
                             </header>
                             <div class="comment-body">
@@ -181,7 +196,8 @@
                     <li class="item cl">
                         <a href="user.html">
                             <i class="avatar size-L radius">
-                                <img alt="50x50" src="holder.js/50x50" class="img-circle" style="border:1px solid #abcdef;">
+                                <img alt="50x50" src="holder.js/50x50" class="img-circle"
+                                     style="border:1px solid #abcdef;">
                             </i>
                         </a>
                         <div class="comment-main">
@@ -189,7 +205,9 @@
                                 <div class="comment-meta">
                                     <a class="comment-author" href="user.html">xiaoli</a>
                                     评论于
-                                    <time title="2016-12-07 09:12:51" datetime="2016-12-07 09:12:51">2017-03-01 09:12:51</time>
+                                    <time title="2016-12-07 09:12:51" datetime="2016-12-07 09:12:51">2017-03-01
+                                        09:12:51
+                                    </time>
                                 </div>
                             </header>
                             <div class="comment-body">
@@ -200,7 +218,8 @@
                     <li class="item cl">
                         <a href="user.html">
                             <i class="avatar size-L radius">
-                                <img alt="50x50" src="holder.js/50x50" class="img-circle" style="border:1px solid #abcdef;">
+                                <img alt="50x50" src="holder.js/50x50" class="img-circle"
+                                     style="border:1px solid #abcdef;">
                             </i>
                         </a>
                         <div class="comment-main">
@@ -208,7 +227,9 @@
                                 <div class="comment-meta">
                                     <a class="comment-author" href="user.html">xiaoli</a>
                                     评论于
-                                    <time title="2016-12-07 09:12:51" datetime="2016-12-07 09:12:51">2017-03-01 09:12:51</time>
+                                    <time title="2016-12-07 09:12:51" datetime="2016-12-07 09:12:51">2017-03-01
+                                        09:12:51
+                                    </time>
                                 </div>
                             </header>
                             <div class="comment-body">
@@ -252,6 +273,43 @@
 
 {% block scripts %}
 {{ super() }}
-<script src="../static/base/js/jquery.singlePageNav.min.js"></script>
-<script src="../static/jwplayer/jwplayer.js"></script>
+<script src="{{ url_for('static', filename='base/js/jquery.singlePageNav.min.js')}}"></script>
+<script src="{{ url_for('static', filename='jwplayer/jwplayer.js')}}"></script>
+<script>
+    var ue = UE.getEditor('input_content', {
+        toolbars: [
+            ['fullscreen', 'emotion', 'preview', 'link']
+        ],
+        initialFrameWidth: "100%",
+        initialFrameHeight: "100",
+    });
+</script>
+<script type="text/javascript">
+    jwplayer.key = "P9VTqT/X6TSP4gi/hy1wy23BivBhjdzVjMeOaQ==";
+</script>
+<script type="text/javascript">
+    jwplayer("moviecontainer").setup({
+        flashplayer: "{{url_for('static', filename='jwplayer/jwplayer.flash.swf')}}",
+        playlist: [{
+            file: "{{url_for('static', filename='video/tuboshu.mp4')}}",
+            title: "环太平洋"
+        }],
+        modes: [{
+            type: "html5"
+        }, {
+            type: "flash",
+            src: "{{url_for('static', filename='jwplayer/jwplayer.flash.swf')}}"
+        }, {
+            type: "download"
+        }],
+        skin: {
+            name: "vapor"
+        },
+        "playlist.position": "left",
+        "playlist.size": 400,
+        height: 500,
+        width: 774,
+    });
+</script>
+
 {% endblock %}
