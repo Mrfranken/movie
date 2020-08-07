@@ -18,12 +18,26 @@
         <a href=""><b>微电影管理系统</b></a>
     </div>
     <div class="login-box-body">
-        <p class="login-box-msg"></p>
-        <form action="" method="post" id="form-data">
+
+        {% with messages = get_flashed_messages() %}
+            {% for message in messages %}
+                {% if message %}
+                    <p class="login-box-msg">{{ message }}</p>
+                {% endif %}
+            {% endfor %}
+        {% endwith %}
+        {% if form and form.errors %}
+            {% for k, e in form.errors.items() %}
+                <p class="login-box-msg">{{ e[0] }}</p>
+            {% endfor %}
+        {% endif %}
+
+        <form action="{{ url_for('admin.login', next=request.args.next) }}" method="post" id="form-data">
             <div class="form-group has-feedback">
                 <input name="user" type="text" class="form-control" placeholder="请输入账号！">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                <div class="col-md-12" id="input_user"></div>
+                <div class="col-md-12" id="input_user">
+                </div>
             </div>
             <div class="form-group has-feedback">
                 <input name="pwd" type="password" class="form-control" placeholder="请输入密码！">
@@ -34,7 +48,7 @@
                 <div class="col-xs-8">
                 </div>
                 <div class="col-xs-4">
-                    <a id="btn-sub" type="submit" class="btn btn-primary btn-block btn-flat">登录</a>
+                    <input id="btn-sub" type="submit" class="btn btn-primary btn-block btn-flat" value="登录"></input>
                 </div>
             </div>
         </form>

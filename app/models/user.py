@@ -3,6 +3,7 @@
 from .base import db, Base
 from sqlalchemy import Column, Integer, String, Text, ForeignKey
 from werkzeug.security import generate_password_hash, check_password_hash
+from app import login_manager
 
 
 class User(Base):
@@ -24,14 +25,6 @@ class User(Base):
     movie_col = db.relationship('MovieCol', backref='user')
 
     # related link: https://blog.csdn.net/chenmozhe22/article/details/95607372
-
-    @property
-    def password(self):
-        return self._password
-
-    @password.setter
-    def password(self, raw_pwd):
-        self._password = generate_password_hash(raw_pwd)
 
 
 class UserLog(Base):

@@ -3,9 +3,9 @@ from flask_login import LoginManager
 
 login_manager = LoginManager()
 
-from .home import home
-from .admin import admin
-from .models import db
+from app.home import home
+from app.admin import admin
+from app.models import db
 
 
 # def register_blueprint(app: Flask, blue_print, url_prefix):
@@ -18,8 +18,10 @@ from .models import db
 def create_app():
     # static_folder在被传入之后，flask为将路径的basename作为url
     app = Flask(__name__)  # static_url_path='/statics/pics/', static_folder='statics/pics/')
-    app.config.from_object('app.secure_setting')
-    app.config.from_object('app.setting')
+    # app.config.from_object('app.secure_setting')
+    # app.config.from_object('app.setting')
+    app.config.from_pyfile('secure_setting.py')
+    app.config.from_pyfile('setting.py')
     app.debug = app.config['DEBUG']
 
     app.register_blueprint(home)
