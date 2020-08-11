@@ -44,3 +44,9 @@
 - Admin模型的创建
 - LoginForm的创建
 - 后台login页面登录（登录不对会提示）
+
+#### 08.11
+- tag_add 页面的搭建（主要包括flash消息的回显，form error的回显）
+- tag_list 页面的搭建
+    - 宏定义的应用（如何在模板中使用函数）
+    - flask-sqlalchemy paginate的应用（包含Pagination类中多个函数的使用）

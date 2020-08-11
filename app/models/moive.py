@@ -16,7 +16,14 @@ class Tag(Base):
 
     id = Column(Integer, primary_key=True)
     name = Column(String(50))
-    movie = db.relationship('Movie', backref='tag')
+
+    # movie = db.relationship('Movie', backref='tag')
+
+    @classmethod
+    def get_tags_by_page(cls, page):
+        if not page:
+            page = 1
+        return Tag.query.order_by(Tag.create_time).paginate(page=page, per_page=2)
 
 
 class Movie(Base):
@@ -37,8 +44,8 @@ class Movie(Base):
     area = Column(String(100))
     release_time = Column(Date)
     length = Column(String(20))
-    comment = db.relationship('Comment', backref='movie')
-    movie_col = db.relationship('MovieCol', backref='movie')
+    # comment = db.relationship('Comment', backref='movie')
+    # movie_col = db.relationship('MovieCol', backref='movie')
 
 
 class Preview(Base):

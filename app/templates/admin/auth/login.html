@@ -22,13 +22,13 @@
         {% with messages = get_flashed_messages() %}
             {% for message in messages %}
                 {% if message %}
-                    <p class="login-box-msg">{{ message }}</p>
+                    <p class="login-box-msg" style="color: red">{{ message }}</p>
                 {% endif %}
             {% endfor %}
         {% endwith %}
         {% if form and form.errors %}
             {% for k, e in form.errors.items() %}
-                <p class="login-box-msg">{{ e[0] }}</p>
+                <p class="login-box-msg" style="color: red">{{ e[0] }}</p>
             {% endfor %}
         {% endif %}
 

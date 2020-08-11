@@ -22,4 +22,3 @@ class Role(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(30), unique=True)
     auths = Column(String(100))  # 角色权限列表
-    admin = db.relationship("Admin", backref='role')

@@ -5,7 +5,8 @@ from app.models import Admin
 
 class LoginForm(Form):
     user = StringField(
-        validators=[DataRequired(message='user can not be empty')]
+        validators=[DataRequired(message='user can not be empty'),
+                    Length(4, 24, message='user length has to be range from 4 to 24')]
     )
 
     pwd = StringField(

@@ -30,8 +30,6 @@ def create_app():
     login_manager.init_app(app)
     login_manager.login_view = 'admin.login'
 
-    # admin.init_app(app)
-
     # mail.init_app(app)
 
     db.init_app(app)  # 初始化数据库

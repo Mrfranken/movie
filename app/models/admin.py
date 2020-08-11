@@ -4,9 +4,10 @@ from .base import db, Base
 from sqlalchemy import Column, Integer, String, Text, ForeignKey, SmallInteger
 from werkzeug.security import generate_password_hash, check_password_hash
 from app import login_manager
+from flask_login import UserMixin
 
 
-class Admin(Base):
+class Admin(Base, UserMixin):
     """
     会员身份模型
     """
@@ -15,10 +16,10 @@ class Admin(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(24), unique=True, nullable=False)
     _password = Column('password', String(128), nullable=False)
-    is_super = Column(SmallInteger)
-    role_id = Column(Integer, ForeignKey('role.id'))
-    admin_log = db.relationship('AdminLog', backref='admin')
-    operate_log = db.relationship('OperateLog', backref='admin')
+    is_super = Column(SmallInteger)  # 是否为超级管理员，0为超级管理员
+    # role_id = Column(Integer, ForeignKey('role.id'))
+    # admin_log = db.relationship('AdminLog', backref='admin')
+    # operate_log = db.relationship('OperateLog', backref='admin')
 
     @property
     def password(self):

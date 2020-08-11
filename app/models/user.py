@@ -20,9 +20,9 @@ class User(Base):
     info = Column(Text(500))
     face = Column(String(50))
     uuid = Column(String(128))
-    user_log = db.relationship('UserLog', backref='user')
-    comment = db.relationship('Comment', backref='user')
-    movie_col = db.relationship('MovieCol', backref='user')
+    # user_log = db.relationship('UserLog', backref='user')
+    # comment = db.relationship('Comment', backref='user')
+    # movie_col = db.relationship('MovieCol', backref='user')
 
     # related link: https://blog.csdn.net/chenmozhe22/article/details/95607372
 
